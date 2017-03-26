@@ -1,0 +1,42 @@
+<html>
+   <head>
+	<title>validation</title>
+ <script type="text/javascript">
+    function valid(form)
+     {
+	var user=form.username.value;
+	var pass=form.pas.value;
+          if(user=="" || user=="NULL")
+	    {
+		alert("please enter username");
+		form.username.focus();
+		return false;
+            }
+            if(pass=="" || pass=="NULL")
+		{
+		   alert("please enter password");
+		   form.pas.focus();
+		    return false;
+		}
+		if(user.length==pass.length)
+                {
+		     alert("enter new username ,greater than password");
+		      form.username.focus();
+                       return false;
+		}
+	return true;
+     }
+  </script>
+  </head>
+<body>
+   <marquee><h1>welcome and login</h1></marquee>
+  
+  <form action="dovalid.html"  border="solid" method="post" onsubmit="return valid(this)">
+
+   USERNAME : <input type="text" name="username"><br><br><br>
+   PASSWORD : <input type="password" name="pas"><br><br><br>
+              <input type="submit" value="submit" height="50%" width="60%">
+            
+  </form>
+</body>
+</html>  
