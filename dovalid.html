@@ -1,0 +1,79 @@
+<marquee color:red>FILL THE FORM</marquee>
+<html>
+    <head>
+     <title>validation</title>
+      <link rel="stylesheet" href="validationexam.css"/>
+     <script type="text/javascript">
+        function emailvalid(form)
+	 {
+	    var mail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var uname=form.cname.value;
+            var fname=form.father.value;
+            var dat=form.date.value;
+                        
+	    if( form.email.value.match(mail))
+		{
+		   
+		    alert("valid");
+                    form.email.focus();
+                     return false;
+		}
+                
+          return true;
+         }
+        
+     </script>
+    <head>
+    <body>
+     
+     <form action="validationexam.html" method="post" onsubmit="return emailvalid(this)"><br><hr>
+       <div id="main">
+               <div id="image">
+		<img scr="/media/aadil/DATA/ME/abc.jpg" alt="no image">
+               </div>
+      ENTER YOUR NAME </h1>: <input type="text" name="cname"><br><hr>
+      FATHERS NAME         : <input type="text" name="father"><br><hr>
+      DOB	           : <input type="date" name="date"><br><hr>
+      
+      ADDRESS              :<div id="address"> <textarea rows=6 columns=7 ></textarea><br>
+      </div>
+      Email                :<input type="email" name="email"><br><hr>
+        
+
+      District             :<input list="district">
+                             <datalist id="district">
+				<option value="anantnag">
+				<option value="srinagar">
+				<option value="jammu">
+				<option value="kulgam">
+				<option value="pulwama">
+				<option value="budgam">
+				<option value="bandipora">
+				<option value="baramullah">
+                              </datalist><br><hr>
+      State                 :<input list="state">
+                             <datalist id="state">
+				<option value="jammu and kashmir">
+				<option value="delhi">
+				<option value="punjab">
+				<option value="himachal pradesh">
+				<option value="goa">
+				<option value="mumbai">
+				<option value="tamil nadu">
+				<option value="kerela">
+                              </datalist><br><hr>
+         <div id="radio">
+      country               :<input type="radio" name="country" value="india" id="c1">india
+                            <input type="radio" name="country" value="other" id="c2">other<br>
+      Enter Pincode        :<input type="number" name="pin"><br>
+      Gender               :<input type="radio" name="gender" value="male" id="g1">male
+                            <input type="radio" name="gender" value="female" id="g2">female<br>
+      
+                             <input type="submit" value="submit">
+                             <input type="reset" value="reset">
+                                <input type="search" value="search">
+          </div>
+      
+       </div>
+          </body>
+   </html>
