@@ -1,0 +1,96 @@
+<html>
+<head>
+  <title>dynamic</title>
+  <style>
+  #myid{
+    width: 900px;
+    height: 600px;
+    margin-left: 150px;
+    margin-right: 20px;
+    margin-top: 20px;
+      padding: 30px;
+  }
+  #sec{
+    width: 800px;
+    height: 500px;
+    border: 5px dashed;
+     margin: 30px;
+    padding: 60px;
+  }
+  </style>
+    <script type="text/javascript">
+    function dynamic()
+    {
+      var x=document.getElementById('myid');
+      if (x.style.display==='none') {
+        x.style.display='block';
+      }else {
+        x.style.display='none';
+      }
+    }
+    </script>
+  </head>
+    <body bgcolor="green">
+
+     <button onclick="dynamic()">click</button>
+    <p>this is a dynamic page </p>
+    <form>
+      <div id="myid">
+        USERNAME : <input type="text" name="username"><br><br><br>
+        PASSWORD : <input type="password" name="pas"><br><br><br>
+                   <input type="submit" value="submit" height="50%" width="60%">
+
+                   </div>
+
+      <div id="sec">
+        <form action="validationexam.html" method="post" onsubmit="return emailvalid(this)"><br><hr>
+          <div id="main">
+                  <div id="image">
+   		                  </div>
+         ENTER YOUR NAME </h1>: <input type="text" name="cname"><br><hr>
+         FATHERS NAME         : <input type="text" name="father"><br><hr>
+         DOB	           : <input type="date" name="date"><br><hr>
+
+         ADDRESS              :<div id="address"> <textarea rows=6 columns=7 ></textarea><br>
+         </div><br><br>
+         Email                :<input type="email" name="email"><br><hr>
+
+
+         District             :<input list="district">
+                                <datalist id="district">
+   				<option value="anantnag">
+   				<option value="srinagar">
+   				<option value="jammu">
+   				<option value="kulgam">
+   				<option value="pulwama">
+   				<option value="budgam">
+   				<option value="bandipora">
+   				<option value="baramullah">
+                                 </datalist><br><hr>
+         State                 :<input list="state">
+                                <datalist id="state">
+   				<option value="jammu and kashmir">
+   				<option value="delhi">
+   				<option value="punjab">
+   				<option value="himachal pradesh">
+   				<option value="goa">
+   				<option value="mumbai">
+   				<option value="tamil nadu">
+   				<option value="kerela">
+                                 </datalist><br><hr>
+            <div id="radio">
+         country               :<input type="radio" name="country" value="india" id="c1">india
+                               <input type="radio" name="country" value="other" id="c2">other<br>
+         Enter Pincode        :<input type="number" name="pin"><br>
+         Gender               :<input type="radio" name="gender" value="male" id="g1">male
+                               <input type="radio" name="gender" value="female" id="g2">female<br>
+
+                                <input type="submit" value="submit">
+                                <input type="reset" value="reset">
+                                   <input type="search" value="search">
+             </div>
+  </div>
+
+    </form>
+    </body>
+    </html>
